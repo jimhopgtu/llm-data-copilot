@@ -5,17 +5,26 @@ from typing import List, Dict, Any
 import os
 from dotenv import load_dotenv
 
+from services.llm_service import LLMService
+from mcp_tools import get_all_tools
+
 load_dotenv()
 
 app = FastAPI(title="LLM Data Copilot")
 
-# CORS for frontend
+# CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+)
+
+# Initialize LLM service
+llm_service = LLMService(
+    api_key=os.getenv("GROQ_API_KEY"),
+    model="llama-3.3-70b-versatile"
 )
 
 class ChatRequest(BaseModel):
@@ -25,20 +34,29 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     tool_calls: List[Dict[str, Any]] = []
-
-@app.get("/health")
-async def health():
-    return {"status": "healthy", "groq_key_set": bool(os.getenv("GROQ_API_KEY"))}
-
+    
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    """Main chat endpoint"""
-    # For now, just echo back
-    return ChatResponse(
-        response=f"You said: {request.message}",
-        tool_calls=[]
-    )
+    """Main chat endpoint - sends message to LLM with MCP tools"""
+    try:
+        result = await llm_service.chat(
+            message=request.message,
+            history=request.conversation_history,
+            tools=get_all_tools()
+        )
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/tools")
 async def list_tools():
-    return {"tools": [], "message": "Tools coming next!"}
+    """List all available MCP tools"""
+    return {"tools": get_all_tools()}
+
+@app.get("/health")
+async def health():
+    return {
+        "status": "healthy",
+        "groq_key_set": bool(os.getenv("GROQ_API_KEY")),
+        "tools_count": len(get_all_tools())
+    }
