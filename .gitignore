@@ -41,3 +41,4 @@ npm-debug.log*
 
 # Vector DB
 chroma_data/
+chroma_data/
