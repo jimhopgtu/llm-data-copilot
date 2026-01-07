@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY backend/ .
 
-# Use minimal requirements (no ML packages)
-RUN pip install --no-cache-dir -r requirements.railway.txt
+# Use minimal requirements (no ML)
+RUN pip install --no-cache-dir -r requirements.railway.txt && \
+    rm -rf /root/.cache
 
 RUN mkdir -p /app/data/documents
 
