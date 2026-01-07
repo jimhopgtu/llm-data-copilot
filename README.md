@@ -6,6 +6,15 @@ An AI-powered data analyst that uses MCP (Model Context Protocol) tools to query
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![Next.js](https://img.shields.io/badge/next.js-16.0+-black.svg)
 
+## 🌐 Live Demo
+
+**Try it now:** https://tranquil-endurance-production.up.railway.app
+
+Ask questions like:
+- "What's the total revenue by category?"
+- "Which customer has the most orders?"
+- "Show me orders from the Mobile App channel"
+
 ## 🌟 Features
 
 - **Natural Language Database Queries**: Ask questions about your data in plain English
