@@ -1,0 +1,137 @@
+About the job
+
+About Us
+
+JustAnswer is the leading AI + Human professional services platform, on a mission to revolutionize how people access expert help. Since 2003, we’ve connected millions of customers across 196 countries with verified professionals in real time—anytime, anywhere. With a powerful combination of human expertise and cutting-edge AI, we’re transforming the future of professional services.
+
+Rooted in boldness, humility, and innovation, we take a data-driven approach to solving complex problems and continuously improving through Lean principles.
+
+We are seeking a visionary
+
+and pragmatic
+
+leader to oversee our data and analytics team. This role requires not only technical expertise but also
+
+a relentless focus on making experimentation, reporting, and automation core to how we run the business
+
+. The VP will
+
+lead our experimentation and reporting platforms (A/B testing, SQL Server, Power BI dashboards, and GA/BigQuery reporting)
+
+while also pushing the boundaries of what’s possible with data science and AI to create a future-oriented analytics culture.
+
+What You’ll Do
+
+Own and scale the company’s experimentation and reporting infrastructure (Power BI dashboards, SQL Server data, GA, BigQuery, and A/B testing)
+
+to make data and insights widely accessible across the business.
+
+Partner with stakeholders to identify analytics and experimentation needs,
+
+delivering automated dashboards and insights that reduce manual reporting and speed decision-making.
+
+Drive strategic data initiatives,
+
+with a priority on adoption and broad usage of the experimentation and reporting platforms as “job one.”
+
+Build a vision and roadmap for the function, ensuring scalability and impact,
+
+while delivering quick wins in reporting automation, test analysis, and data accessibility.
+
+Evangelize data-driven decision-making and AI across the organization,
+
+with a bias toward practical application (e.g., connecting LLMs to SQL, automating reporting, and enabling non-technical users to self-serve).
+
+Lead and mentor a global team, developing leaders who are strong technical contributors and effective business partners.
+
+Anticipate future needs and opportunities, including
+
+expanding use of predictive ML, generative AI, and unstructured data analysis (e.g., CSAT and customer interactions) to unlock new insights.
+
+Who You Are
+
+A builder who thrives on balancing visionary strategy with hands-on execution in reporting, experimentation, and AI adoption.
+
+An experienced leader with a track record of driving adoption of
+
+reporting/experimentation platforms
+
+as well as advanced analytics.
+
+Passionate about leveraging
+
+AI and automation not as abstract ideas but as tools to eliminate manual work, accelerate insights, and expand access to data.
+
+Comfortable operating in ambiguity, with the ability to deliver quick wins while building long-term roadmaps.
+
+Strong technical foundation in SQL, Power BI, and A/B testing frameworks, with fluency in Python and other tools for ad hoc analysis.
+
+Proven experience leading global teams and cultivating both technical and leadership talent.
+
+Success in Year One
+
+Company-wide adoption of the experimentation and reporting platforms (SQL Server, Power BI, GA/BigQuery, A/B testing).
+
+Automation of a significant portion of recurring reporting and test analysis, freeing the team from manual work.
+
+Demonstrated use of AI in production (e.g., LLMs generating SQL queries, automated reporting for non-technical teams, or AI-assisted analysis of unstructured data like CSAT).
+
+Established a clear vision and roadmap for scaling the function, with visible impact across multiple departments.
+
+Remote From these States
+
+California, Florida, Georgia, Idaho, Illinois, Massachusetts, Michigan, New Jersey, New York, North Carolina, Ohio, Oregon, Pennsylvania, Texas, Virginia, Washington, and Wisconsin.
+
+Pay Transparency
+
+JustAnswer will provide pay transparency information upon application to those in qualifying jurisdictions.
+
+Why Join Our Team
+
+At JustAnswer, we blend the best of AI and human expertise to make a real impact. Our mission-driven culture values bold ideas, continuous learning, and global collaboration. We offer a flexible, remote-first environment with equitable rewards, career growth opportunities, and a supportive community where your contributions truly matter. Join us and be part of something bigger, helping people, one answer at a time.
+
+Our JustAnswer Promise
+
+We strive together to make the world a better place, one answer at a time. JustAnswer's mission is to help people. We do this by connecting our members with verified Experts to help answer life's questions and solve problems. It’s not every day in your life that you get to be a part of a simple yet powerful mission. We pride ourselves in doing things the JA Way.
+
+•
+
+Data driven:
+
+Data decides, not egos
+
+•
+
+Courageous:
+
+We take risks and challenge the status quo
+
+•
+
+Innovative:
+
+We're constantly learning, creating, and adapting
+
+•
+
+Lean:
+
+We focus on customers, using lean testing to learn how to serve them best
+
+•
+
+Humble:
+
+Past success is not a guarantee of future success
+
+If these things matter to you, come join the team here at JustAnswer!
+
+Our Commitment to an Inclusive Workplace
+
+We welcome people from all backgrounds who seek the opportunity to help build a future where professional services are readily available to all. If you have curiosity, passion, and a collaborative spirit, come work with us. JustAnswer is committed to an inclusive workplace. JustAnswer is an equal opportunity employer and does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status.
+
+AI Disclosure & Informed Consent
+
+Artificial intelligence (AI) technology may be used during the hiring process to record, transcribe, analyze, and rank interview responses. By submitting your application and participating in the interview process, you acknowledge and consent to the use of AI technology in the hiring process. For more information see our
+
+AI Disclosure and Consent Policy .

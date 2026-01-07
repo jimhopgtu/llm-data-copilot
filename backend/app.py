@@ -1,9 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Any
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
 from services.llm_service import LLMService
 from mcp_tools import get_all_tools
@@ -60,3 +61,34 @@ async def health():
         "groq_key_set": bool(os.getenv("GROQ_API_KEY")),
         "tools_count": len(get_all_tools())
     }
+
+@app.post("/api/upload")
+async def upload_file(file: UploadFile = File(...)):
+    """Upload a file to the documents directory"""
+    try:
+        # Security: validate file type
+        allowed_extensions = {'.txt', '.csv', '.md'}
+        file_ext = Path(file.filename).suffix.lower()
+        
+        if file_ext not in allowed_extensions:
+            return {
+                "success": False,
+                "error": f"File type {file_ext} not allowed. Use: {', '.join(allowed_extensions)}"
+            }
+        
+        # Save file
+        data_dir = Path(os.getenv("DATA_DIR", "../data/documents"))
+        file_path = data_dir / file.filename
+        
+        content = await file.read()
+        with open(file_path, 'wb') as f:
+            f.write(content)
+        
+        return {
+            "success": True,
+            "filename": file.filename,
+            "message": f"File {file.filename} uploaded successfully"
+        }
+    
+    except Exception as e:
+        return {"success": False, "error": str(e)}
