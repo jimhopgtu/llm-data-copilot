@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy backend folder specifically
-COPY backend/ ./backend/
+# Copy everything
+COPY . .
 
 # Install requirements
 RUN pip install --no-cache-dir -r backend/requirements.txt
@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r backend/requirements.txt
 WORKDIR /app/backend
 
 # Create data directories
-RUN mkdir -p data/documents chroma_data
+RUN mkdir -p /app/data/documents /app/chroma_data
 
 # Expose port
 EXPOSE 8000
