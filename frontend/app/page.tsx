@@ -86,19 +86,19 @@ export default function ChatPage() {
               <h2 className="text-xl font-semibold mb-4">Welcome! 👋</h2>
               <p className="mb-4">Try asking:</p>
               <div className="space-y-2 text-sm max-w-md mx-auto">
-                <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                     onClick={() => setInput("What files are available?")}>
-                  💾 "What files are available?"
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                     onClick={() => setInput("What's the total revenue by category?")}>
-                  📊 "What's the total revenue by category?"
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                     onClick={() => setInput("Index the long_report.txt file")}>
-                  📄 "Index the long_report.txt file"
-                </div>
+              <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => setInput("What files are available?")}>
+                💾 "What files are available?"
               </div>
+              <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => setInput("What's the total revenue by category?")}>
+                📊 "What's the total revenue by category?"
+              </div>
+              <div className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                  onClick={() => setInput("Which customer has the most orders?")}>
+                👥 "Which customer has the most orders?"
+              </div>
+            </div>
             </div>
           )}
 
@@ -191,9 +191,6 @@ export default function ChatPage() {
           <ToolCard name="files_list" description="List available files" />
           <ToolCard name="files_read" description="Read file contents" />
           <ToolCard name="sqlite_query" description="Query the database" />
-          <ToolCard name="doc_index" description="Index documents for search" />
-          <ToolCard name="doc_search" description="Semantic document search" />
-          <ToolCard name="doc_list" description="List indexed documents" />
         </div>
 
         <div className="mt-6 pt-6 border-t">
