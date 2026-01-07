@@ -9,8 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend code
 COPY backend/ .
 
-# Copy data directory
-COPY data/ ./data/
+# Create data directories (Railway will use these as empty initially)
+RUN mkdir -p data/documents chroma_data
 
 # Expose port
 EXPOSE 8000
