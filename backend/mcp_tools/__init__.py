@@ -32,18 +32,23 @@ def get_all_tools():
                 }
             }
         },
-        {
-            "type": "function",
-            "function": {
-                "name": "sqlite_query",
-                "description": "Execute a READ-ONLY SQL query",
-                "parameters": {
-                    "type": "object",
-                    "properties": {"query": {"type": "string", "description": "SQL SELECT query"}},
-                    "required": ["query"]
+{
+    "type": "function",
+    "function": {
+        "name": "sqlite_query",
+        "description": "Execute a READ-ONLY SQL query on the SQLite database. Available tables: 'orders' (id, order_date, customer_id, product_name, category, quantity, price, total, channel) and 'customers' (id, name, email, signup_date, total_orders). Only SELECT queries are allowed.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "SQL SELECT query to execute. Example: SELECT category, SUM(total) as revenue FROM orders GROUP BY category"
                 }
-            }
+            },
+            "required": ["query"]
         }
+    }
+}
     ]
 
 async def execute_tool(tool_name: str, arguments: dict):
