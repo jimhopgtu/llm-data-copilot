@@ -2,17 +2,19 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Copy backend code
 COPY backend/ .
+
+# Copy data initialization script
 COPY data/init_db.py ./data/
 
-# Use minimal requirements (no ML)
+# Use minimal requirements
 RUN pip install --no-cache-dir -r requirements.railway.txt && \
-    rm -rf /root/.cache
+    rm -rf /root/.cache && \
+    mkdir -p /app/data/documents
 
-# Create data directories and initialize database
-RUN mkdir -p /app/data/documents && \
-    cd /app/data && \
-    python init_db.py
+# Make startup script executable
+RUN chmod +x startup.sh
 
 EXPOSE 8000
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["./startup.sh"]
