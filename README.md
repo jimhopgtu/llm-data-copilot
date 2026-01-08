@@ -21,6 +21,8 @@
 
 ## 🎥 Demo
 
+![Demo](demo.gif)
+
 *Working locally with full functionality - database queries, file operations, and intelligent analysis*
 
 Try asking:
